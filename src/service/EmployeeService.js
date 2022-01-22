@@ -9,7 +9,7 @@ class EmployeeService {
 
     getEmployeesPageAndSort(pageNumber, sortField, sortDirection) {
         //http://localhost:8080/api/employees/page/2?sortField=firstName&sortDir=asc
-        console.log(EMPLOYEE_API_BASE_URL + '/page/' + pageNumber + '?sortField=' + sortField + '&sortDir=' + sortDirection)
+        //console.log(EMPLOYEE_API_BASE_URL + '/page/' + pageNumber + '?sortField=' + sortField + '&sortDir=' + sortDirection)
         return axios.get(EMPLOYEE_API_BASE_URL + '/page/' + pageNumber + '?sortField=' + sortField + '&sortDir=' + sortDirection)
     }
 
