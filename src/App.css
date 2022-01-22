@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+/*-- RESET --*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Chettan 2', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*== NAVIGATION ==*/
+
+.side-menu {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  transition: left 0.7s;
+  background-color: #222e3c;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.smallImage {
+  font-size: 2rem;
+}
+
+.header-bar {
+  margin-left: 280px;
+  transition: margin-left 0.7s;
+  height: 70px;
+  background-color: white;
+}
+
+.main-color {
+  color: #868d96
+}
+
+header {
+  width: 100%;
+}
+
+.header-items {
+  width: 100%;
+}
+
+/*== MAIN PAGE CONTENT ==*/
+
+.main-content {
+  margin-top: 3px;
+  height: 50%;
+  margin-left: 280px;
+  transition: margin-left 0.7s;
+}
+
+.card-width {
+  width: 42rem;
+}
+
+
+.sub {
+  cursor: pointer;
+}
+
+
+/*== MEDIA QUERIES ==*/
+
+@media only screen and (max-width: 900px) {
+  .side-menu {
+    left: -280px;
+    transition: left 0.7s;
+    background-color: #222e3c;
+    
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .main-content {
+    margin-left: 0px;
+    transition: margin-left 0.7s;
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-bar {
+    margin-left:0px;
+    transition: margin-left 0.7s;
   }
+
 }
