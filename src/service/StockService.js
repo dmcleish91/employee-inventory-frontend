@@ -17,23 +17,23 @@ class StockService {
     }
 
     getSumOfAvailableUnits() {
-        return axios.get(STOCK_API_BASE_URL + '/availableSum')
+        return axios.get(STOCK_API_BASE_URL + '/totals/availableSum')
     }
 
     getSumOfSoldUnits() {
-        return axios.get(STOCK_API_BASE_URL + '/soldSum')
+        return axios.get(STOCK_API_BASE_URL + '/totals/soldSum')
     }
 
     addStock(stock) {
-        return axios.post(STOCK_API_BASE_URL + '/', stock)
+        return axios.post(STOCK_API_BASE_URL + '/save', stock)
     }
 
     updateStock(stock, stockId) {
-        return axios.put(STOCK_API_BASE_URL + '/' + stockId, stock)
+        return axios.put(STOCK_API_BASE_URL + '/update/' + stockId, stock)
     }
 
     deleteStock(stockId) {
-        return axios.delete(STOCK_API_BASE_URL + '/' + stockId)
+        return axios.delete(STOCK_API_BASE_URL + '/delete/' + stockId)
     }
 
 }

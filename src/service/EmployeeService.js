@@ -26,15 +26,15 @@ class EmployeeService {
     }
 
     addEmployee(employee) {
-        return axios.post(EMPLOYEE_API_BASE_URL + '/', employee)
+        return axios.post(EMPLOYEE_API_BASE_URL + '/save', employee)
     }
 
     updateEmployee(employee, employeeId) {
-        return axios.put(EMPLOYEE_API_BASE_URL + '/' + employeeId, employee)
+        return axios.put(EMPLOYEE_API_BASE_URL + '/update/' + employeeId, employee)
     }
 
     deleteEmployee(employeeid) {
-        return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeid)
+        return axios.delete(EMPLOYEE_API_BASE_URL + '/delete/' + employeeid)
     }
 
 }
